@@ -11,6 +11,7 @@ curl -o install.sh https://raw.githubusercontent.com/warrensbox/terraform-switch
 chmod 755 install.sh
 
 # Install tfswitch in a location you have permission
+echo $(pwd)
 ./install.sh -b $(pwd)/.bin
 
 # set custom bin path
