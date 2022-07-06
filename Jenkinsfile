@@ -16,6 +16,7 @@ pipeline {
     }
     stage('terraform') {
       steps {
+        sh './terraformw init'
         sh './terraformw plan -no-color'
       }
     }
