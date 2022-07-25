@@ -25,6 +25,20 @@ terraform {
       version = ">= 2.0.1"
     }
   }
+backend s3 {
 
+  bucket = "up-state-bucket"
+
+  key = "terraform/terraform_cluster_lock.tfstate"
+
+  region = "us-east-2"
+
+
+
+  dynamodb_table = "up_cluster_lock"
+
+  encrypt = true
+
+}
   required_version = ">= 0.14"
 }
